@@ -13,6 +13,8 @@ public class EnemySpawner : MonoBehaviour {
 	public Wave[] waves;
 	public float timeBetweenWaves = 5f;
 	public float waveCountdown;
+	public int X = 0;
+	public int Y = 0;
 
 	void Start()
 	{
@@ -81,7 +83,10 @@ public class EnemySpawner : MonoBehaviour {
 	void SpawnEnemy(Transform enemy)
 	{
 		Debug.Log("Spawing enemy " + enemy.name);
-		Instantiate (enemy, transform.position, transform.rotation);
+		Vector3 a = transform.position;
+		a.x = a.x + X;
+		a.y = a.y + Y;
+		Instantiate (enemy, a, transform.rotation);
 	}
 
 
