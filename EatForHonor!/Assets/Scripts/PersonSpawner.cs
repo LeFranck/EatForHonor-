@@ -10,17 +10,11 @@ public class PersonSpawner : MonoBehaviour {
 		Instantiate (person, transform.position, transform.rotation);
 		Destroy (this);
 	}
-
-	public void Peopeo(Transform person)
-	{
-		Instantiate (person, transform.position, transform.rotation);
-		Destroy (this);
-	}
-
+		
 	public void DestruirObjeto(string nametag)
 	{
 		GameObject cosa = GameObject.FindGameObjectWithTag("nametag");
-		Destroy (cosa);
+		Destroy(cosa);
 	}
 
 	// Use this for initialization
