@@ -166,7 +166,7 @@ GameObject:
   - component: {fileID: 841177566}
   m_Layer: 0
   m_Name: dude
-  m_TagString: Persona
+  m_TagString: Finish
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -351,7 +351,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56f95829b78c8de4aa59c859b1858dde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 10
+  moveSpeed: 3
 --- !u!212 &1098098203
 SpriteRenderer:
   m_ObjectHideFlags: 0
