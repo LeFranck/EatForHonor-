@@ -20,7 +20,7 @@ public class CollisionTest : MonoBehaviour {
 	{
 		if (collision.gameObject.tag == "Persona") {
 			Debug.Log ("chocooo debe comer");
-			collision.transform.GetComponent<PersonActs> ().comiendo = true;
+			//collision.transform.GetComponent<PersonActs> ().comiendo = true;
 		} else {
 			Debug.Log ("WOOOOLA");
 		}
