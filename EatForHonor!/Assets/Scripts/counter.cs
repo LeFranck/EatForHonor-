@@ -6,6 +6,7 @@ public class counter : MonoBehaviour {
 
     private int honor = 0;
     private int deshonra = 0;
+    public string nextStage;
 	// Use this for initialization
 	void Start () {
 		
@@ -13,7 +14,10 @@ public class counter : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+        if (honor == 3)
+        {
+            transform.GetComponent<MenuCrontoller>().LoadScene(nextStage);
+        }
 	}
 
     void OnCollisionEnter2D(Collision2D collision)
