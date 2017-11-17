@@ -1057,11 +1057,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4960053713474404, guid: 8796efe0642d55a4db2fe50ed4c87d12, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 10.56
+      value: 9.8
       objectReference: {fileID: 0}
     - target: {fileID: 4960053713474404, guid: 8796efe0642d55a4db2fe50ed4c87d12, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -2.12
+      value: -1.9
       objectReference: {fileID: 0}
     - target: {fileID: 4960053713474404, guid: 8796efe0642d55a4db2fe50ed4c87d12, type: 2}
       propertyPath: m_LocalPosition.z
@@ -1090,6 +1090,10 @@ Prefab:
     - target: {fileID: 1124182134776342, guid: 8796efe0642d55a4db2fe50ed4c87d12, type: 2}
       propertyPath: m_Name
       value: Trashcan
+      objectReference: {fileID: 0}
+    - target: {fileID: 4960053713474404, guid: 8796efe0642d55a4db2fe50ed4c87d12, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 0.2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8796efe0642d55a4db2fe50ed4c87d12, type: 2}
