@@ -18,6 +18,7 @@ public class EnemySpawner : MonoBehaviour {
 
 	void Start()
 	{
+        this.enabled = false;
 		waveCountdown = timeBetweenWaves;
 	}
 
