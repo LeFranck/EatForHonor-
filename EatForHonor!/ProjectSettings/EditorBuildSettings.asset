@@ -26,3 +26,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Escenas/trash.unity
     guid: 8faf955abfb139244bda1978f087a693
+  - enabled: 1
+    path: Assets/Escenas/PersonasComiendo.unity
+    guid: 5b3a749c9e1c07844915922944f74034

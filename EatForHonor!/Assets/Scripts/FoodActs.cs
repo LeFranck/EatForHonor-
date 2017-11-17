@@ -21,6 +21,10 @@ public class FoodActs : MonoBehaviour {
 		if (collision.gameObject.tag == "persona") 
 		{
 			Debug.Log ("chocooo debe comer");
+		}else {
+			Debug.Log ("WOOOOLA");
 		}
+		Destroy (collision.gameObject);
+
 	}
 }
