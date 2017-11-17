@@ -27,8 +27,10 @@ public class EnemySpawner : MonoBehaviour {
 		{
 			if (!EnemyIsAlive ()) 
 			{
-				//new wave
-				Debug.Log("wave completed");
+                //new wave
+                waveCountdown = 4f;
+                state = SpawnState.COUNTING;
+                Debug.Log("wave completed");
 			}
 			else
 			{
@@ -42,7 +44,9 @@ public class EnemySpawner : MonoBehaviour {
 			if (state != SpawnState.SPAWNING) 
 			{
 				StartCoroutine (SpawnWave (waves [nextWave]));
-			}
+                //Posiblw cagaso
+                waveCountdown = 4f;
+            }
 		}
 		else 
 		{
@@ -59,7 +63,7 @@ public class EnemySpawner : MonoBehaviour {
 		for (int i = 0; i < wave.count; i++) 
 		{
 			SpawnEnemy (wave.enemy);
-			yield return new WaitForSeconds(1f/wave.rate);
+			yield return new WaitForSeconds(5f/wave.rate);
 		}
 
 		state = SpawnState.WAITING;

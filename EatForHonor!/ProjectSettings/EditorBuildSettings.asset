@@ -18,6 +18,9 @@ EditorBuildSettings:
     path: Assets/Escenas/wut.unity
     guid: c37e3333da5452b4b9984af7a7931b98
   - enabled: 1
+    path: Assets/Escenas/etapa1.unity
+    guid: 3a4106f610dfb894aa38f56fe1d2b94a
+  - enabled: 1
     path: Assets/Escenas/Introduccion.unity
     guid: 3cd5da30318775245a0685313a15fa86
   - enabled: 1
