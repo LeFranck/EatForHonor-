@@ -9,7 +9,7 @@ public class CreateButtons : MonoBehaviour
     public GameObject woman;
     public GameObject boy;
     public GameObject girl;
-    public Transform canvas;
+    //public Transform canvas;
     //public Transform self;
     public GameObject boyInstance;
     public GameObject girlInstance;
@@ -36,7 +36,7 @@ public class CreateButtons : MonoBehaviour
         }
         else
         {
-            manInstance = Instantiate(man, new Vector3(transform.position.x + transform.localScale.x / 2 + man.transform.localScale.x / 2, transform.position.y + transform.localScale.y / 2 + man.transform.localScale.y / 2, 0), Quaternion.identity, canvas);
+            manInstance = Instantiate(man, new Vector3(transform.position.x + transform.localScale.x / 2 + man.transform.localScale.x / 2, transform.position.y + transform.localScale.y / 2 + man.transform.localScale.y / 2, 0), Quaternion.identity, transform.parent);
             //Debug.Log(transform.eulerAngles.z);
             //manInstance.transform.Rotate(new Vector3(0, 0, transform.eulerAngles.z));
             manInstance.GetComponent<MyChair>().chair = gameObject;
@@ -52,7 +52,7 @@ public class CreateButtons : MonoBehaviour
         }
         else
         {
-            womanInstance = Instantiate(woman, new Vector3(transform.position.x - transform.localScale.x / 2 - woman.transform.localScale.x / 2, transform.position.y + transform.localScale.y / 2 + woman.transform.localScale.y / 2, 0), Quaternion.identity, canvas);
+            womanInstance = Instantiate(woman, new Vector3(transform.position.x - transform.localScale.x / 2 - woman.transform.localScale.x / 2, transform.position.y + transform.localScale.y / 2 + woman.transform.localScale.y / 2, 0), Quaternion.identity, transform.parent);
             //womanInstance.transform.Rotate(new Vector3(0, 0, transform.eulerAngles.z));
             womanInstance.GetComponent<MyChair>().chair = gameObject;
         }
@@ -67,7 +67,7 @@ public class CreateButtons : MonoBehaviour
         }
         else
         {
-            boyInstance = Instantiate(boy, new Vector3(transform.position.x + transform.localScale.x / 2 + boy.transform.localScale.x / 2, transform.position.y - transform.localScale.y / 2 - boy.transform.localScale.y / 2, 0), Quaternion.identity, canvas);
+            boyInstance = Instantiate(boy, new Vector3(transform.position.x + transform.localScale.x / 2 + boy.transform.localScale.x / 2, transform.position.y - transform.localScale.y / 2 - boy.transform.localScale.y / 2, 0), Quaternion.identity, transform.parent);
             //boyInstance.transform.Rotate(new Vector3(0, 0, transform.eulerAngles.z));
             boyInstance.GetComponent<MyChair>().chair = gameObject;
         }
@@ -82,7 +82,7 @@ public class CreateButtons : MonoBehaviour
         }
         else
         {
-            girlInstance = Instantiate(girl, new Vector3(transform.position.x - transform.localScale.x / 2 - girl.transform.localScale.x / 2, transform.position.y - transform.localScale.y / 2 - girl.transform.localScale.y / 2, 0), Quaternion.identity, canvas);
+            girlInstance = Instantiate(girl, new Vector3(transform.position.x - transform.localScale.x / 2 - girl.transform.localScale.x / 2, transform.position.y - transform.localScale.y / 2 - girl.transform.localScale.y / 2, 0), Quaternion.identity, transform.parent);
             //girlInstance.transform.Rotate(new Vector3(0, 0, transform.eulerAngles.z));
             girlInstance.GetComponent<MyChair>().chair = gameObject;
         }

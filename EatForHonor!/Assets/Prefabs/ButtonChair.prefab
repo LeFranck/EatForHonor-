@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 114715250906136056}
   - component: {fileID: 114623546205805168}
   - component: {fileID: 114592563780637352}
+  - component: {fileID: 114429490039118184}
   m_Layer: 5
   m_Name: ButtonChair
   m_TagString: Untagged
@@ -30,6 +31,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &114429490039118184
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1735244116795994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fd42db45fe1aea4685f5348d494b648, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clicked: 0
 --- !u!114 &114592563780637352
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -45,7 +58,6 @@ MonoBehaviour:
   woman: {fileID: 1000293797434638, guid: c9f31e649943f2745a0c18d20453f275, type: 2}
   boy: {fileID: 1419850257224158, guid: 826398fe71b0c314e9d28576d8ec79f1, type: 2}
   girl: {fileID: 1333677132605164, guid: eca71e5aae18c0541a8fffec196aea7f, type: 2}
-  canvas: {fileID: 0}
   boyInstance: {fileID: 0}
   girlInstance: {fileID: 0}
   manInstance: {fileID: 0}
@@ -124,6 +136,17 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 114592563780637352}
         m_MethodName: CreateWoman
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 114429490039118184}
+        m_MethodName: click
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
