@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class counter : MonoBehaviour {
 
@@ -16,7 +18,7 @@ public class counter : MonoBehaviour {
 	void Update () {
         if (honor == 3)
         {
-            transform.GetComponent<MenuCrontoller>().LoadScene(nextStage);
+			SceneManager.LoadScene ("Introduccion");
         }
 	}
 
@@ -25,6 +27,7 @@ public class counter : MonoBehaviour {
         if (collision.gameObject.tag == "Enemy"){
             if (collision.gameObject.GetComponent<life>().health == 0){
                 honor++;
+				GameManager.instance.score += 1000;
                 Debug.Log("honor");
             }else{
                 deshonra++;
