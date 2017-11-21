@@ -12,7 +12,15 @@ public class GameManager : MonoBehaviour
 	public string previewStage;
 	public int score = 0;
 	public int checkin_if_sublimeworks = 10;
+
+	//Variables para la generacion de personas en los distintos niveles
+	public GameObject[] TiposPersonas;
 	public int[] PersonasPermitidas = new int[4];
+	//Controlar que haya solo un ShowPersonOptionsAlavez
+	public bool ShowingPersons;
+	public bool CanShowPersons = true;
+	public int PersonTaken = -1;
+
 	//Awake is always called before any Start functions
 	void Awake()
 	{

@@ -139,10 +139,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5346e7be53a4fe6428fea2c76059ea6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stage: MainMenu
+  stage: Stage1
   previewStage: 
   score: 0
   checkin_if_sublimeworks: 10
+  TiposPersonas:
+  - {fileID: 1471128350796698, guid: 343d24368a3ef574b9856de669735cc4, type: 2}
+  - {fileID: 1733298920184714, guid: 356d1a00a030f7545a2a43d648633f4a, type: 2}
+  - {fileID: 1619447673507512, guid: 148f83429fcedcb44a07f16eb5ffbe00, type: 2}
+  - {fileID: 1610524005252114, guid: 6e25b5325f9598b47818569b61cbf1d8, type: 2}
+  PersonasPermitidas: 01000000010000000100000001000000
+  ShowingPersons: 0
+  CanShowPersons: 1
+  PersonTaken: -1
 --- !u!4 &9389128
 Transform:
   m_ObjectHideFlags: 0

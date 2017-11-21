@@ -4,24 +4,17 @@ using UnityEngine;
 
 public class PersonSpawner : MonoBehaviour {
 	
-	public Transform TipoPersona;
-	public int option = -1;
-	public bool showing = false;
+	public GameObject TipoPersona;
+	public Transform spawnPos;
+	public Sprite sprite;
 
 	void OnMouseDown() {
-		if (showing) {
-			//Stopshowgin
-			showing = false;
-		} else if(option != -1){
-			//int option = ShowOptions
-			//StopShowingOptions
-		}
+		PersonSpawn();
 	}
 
-	public void PersonSpawn(Transform person)
+	public void PersonSpawn()
 	{
-		Instantiate (person, transform.position, transform.rotation);
-		Destroy (this);
+		Instantiate (TipoPersona, transform.position, transform.rotation);
 	}
 
 	// Use this for initialization
