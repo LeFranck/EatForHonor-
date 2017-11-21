@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class PersonSpawner : MonoBehaviour {
 
+	void OnMouseDown() {
+	}
+		
 
 	public void PersonSpawn(Transform person)
 	{

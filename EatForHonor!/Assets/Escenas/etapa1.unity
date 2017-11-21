@@ -271,7 +271,7 @@ Prefab:
     - target: {fileID: 224777743401478812, guid: 8610e1407a06f2646b6fb5a5b26b5ecc,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -255
+      value: -254.99998
       objectReference: {fileID: 0}
     - target: {fileID: 224777743401478812, guid: 8610e1407a06f2646b6fb5a5b26b5ecc,
         type: 2}
@@ -1380,7 +1380,7 @@ Canvas:
   m_GameObject: {fileID: 1509012355}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 1
+  m_RenderMode: 2
   m_Camera: {fileID: 900526141}
   m_PlaneDistance: 10
   m_PixelPerfect: 0
