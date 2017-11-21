@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class PersonSpawner : MonoBehaviour {
 	
-	public GameObject TipoPersona;
-	public Transform spawnPos;
-	public Sprite sprite;
+	public int TipoDePersona;
+	public Transform SpawnPos;
+	public SpriteRenderer sr;
 
 	void OnMouseDown() {
 		PersonSpawn();
@@ -14,12 +14,20 @@ public class PersonSpawner : MonoBehaviour {
 
 	public void PersonSpawn()
 	{
-		Instantiate (TipoPersona, transform.position, transform.rotation);
+		Instantiate (GameManager.instance.TiposPersonas[TipoDePersona], SpawnPos.position, SpawnPos.rotation);
+		GameManager.instance.ShowingPersons = false;
+		GameManager.instance.PersonTaken = TipoDePersona;
 	}
 
 	// Use this for initialization
-	void Start () {
 
+	void Awake(){
+		Debug.Log ("hola, soy awake");
+		gameObject.transform.localScale = new Vector3 (0.3f,0.3f,1f);
+
+	}
+
+	void Start () {
 	}
 
 	// Update is called once per frame
