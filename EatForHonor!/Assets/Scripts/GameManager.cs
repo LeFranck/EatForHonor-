@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
 	public string previewStage;
 	public int score = 0;
 	public int checkin_if_sublimeworks = 10;
+	public int[] PersonasPermitidas = new int[4];
 	//Awake is always called before any Start functions
 	void Awake()
 	{
