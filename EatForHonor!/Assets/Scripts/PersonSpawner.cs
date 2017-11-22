@@ -6,7 +6,7 @@ public class PersonSpawner : MonoBehaviour {
 	
 	public int TipoDePersona;
 	public Transform SpawnPos;
-	public SpriteRenderer sr;
+	//public SpriteRenderer sr;
 
 	void OnMouseDown() {
 		PersonSpawn();
@@ -15,8 +15,8 @@ public class PersonSpawner : MonoBehaviour {
 	public void PersonSpawn()
 	{
 		Instantiate (GameManager.instance.TiposPersonas[TipoDePersona], SpawnPos.position, SpawnPos.rotation);
-		GameManager.instance.ShowingPersons = false;
 		GameManager.instance.PersonTaken = TipoDePersona;
+		GameManager.instance.PersonasPermitidas [TipoDePersona] -= 1;
 	}
 
 	// Use this for initialization

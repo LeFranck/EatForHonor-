@@ -10,33 +10,33 @@ public class ShowPersonOptions : MonoBehaviour {
 	void OnMouseDown() 
 	{
 		Debug.Log("Me aprietan!!!");
-		if (GameManager.instance.CanShowPersons) 
-		{
-			bool showing = GameManager.instance.ShowingPersons;
-			if (showing) 
+
+		//Generar spawners y setear sillaUsada
+		if (GameManager.instance.SillaUsada == "") {
+			for (int i = 0; i < GameManager.instance.PersonasPermitidas.Length; i++) 
 			{
-				for (int i = 0; i < spawners.Length; i++) 
+				if (GameManager.instance.PersonasPermitidas [i] > 0) 
 				{
-					if(spawners[i] != null)
-						Destroy (spawners [i]);
+					GeneratePersonSpawner(i);
 				}
-				GameManager.instance.ShowingPersons = false;
-				Debug.Log ("Destrui los spawners");
-			} 
-			else if (GameManager.instance.PersonTaken == -1) 
-			{
-				for (int i = 0; i < GameManager.instance.PersonasPermitidas.Length; i++) 
-				{
-					if (GameManager.instance.PersonasPermitidas [i] > 0) 
-					{
-						GeneratePersonSpawner (i);
-					}
-				}
-				GameManager.instance.ShowingPersons = true;
-				Debug.Log ("genere los spawners");
-			} 
+			}
+			GameManager.instance.ShowingPersons = true;
+			GameManager.instance.SillaUsada = gameObject.name;
+			Debug.Log ("genere los spawners");
 		}
+		else if(GameManager.instance.SillaUsada == gameObject.name)  //Destruir spawners y setear SillaUsada a ""
+		{
+			for (int i = 0; i < spawners.Length; i++) 
+			{
+				if(spawners[i] != null)
+					Destroy(spawners[i]);
+			}
+			GameManager.instance.SillaUsada = "";
+			Debug.Log ("Destrui los spawners de "+gameObject.name);
+		}
+
 	}
+
 
 	public void GeneratePersonSpawner(int i){
 		Vector3 pos = new Vector3(transform.position.x, transform.position.y, 0);
@@ -55,38 +55,30 @@ public class ShowPersonOptions : MonoBehaviour {
 		spawners[i].GetComponent<PersonSpawner>().SpawnPos = transform;
 		spawners[i].GetComponent<PersonSpawner>().TipoDePersona = i;
 
-		Debug.Log("Le le le!!!");
 		SpriteRenderer sr = GameManager.instance.TiposPersonas[i].GetComponent<SpriteRenderer> ();
 		spawners[i].AddComponent<SpriteRenderer>();
 		spawners[i].GetComponent<SpriteRenderer>().sprite = sr.sprite;
 		spawners[i].AddComponent<BoxCollider2D>();
-		//spawners[i].GetComponent<BoxCollider2D>()
-		Debug.Log("Instancie al crio!!!");
-
-
-		//Instantiate(spawners[i], new Vector3(pos.x, pos.y, 0), transform.rotation);
 	}
 
 	// Use this for initialization
 	void Start () {
 		spawners = new GameObject[4];
-		//for (int j = 0; j < spawners.Length; j++) {
-		//	spawners[j] = new GameObject ();
-		//}
 		Debug.Log("inicialize Spawners vaciooo!!!");
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		//Se ha generado una persona desde los personsSpawners creeados aca
-		if (GameManager.instance.PersonTaken != -1) {
+		if (GameManager.instance.PersonTaken != -1 && GameManager.instance.SillaUsada == gameObject.name) {
 			for (int i = 0; i < spawners.Length; i++) 
 			{
 				if(spawners[i] != null)
-					Destroy (spawners [i]);
+					Destroy (spawners[i]);
 			}
-			GameManager.instance.ShowingPersons = false;
 			GameManager.instance.PersonTaken = -1;
+			GameManager.instance.SillaUsada = "";
+			Destroy (this);
 		}
 		
 	}

@@ -20,6 +20,7 @@ public class GameManager : MonoBehaviour
 	public bool ShowingPersons;
 	public bool CanShowPersons = true;
 	public int PersonTaken = -1;
+	public string SillaUsada = "";
 
 	//Awake is always called before any Start functions
 	void Awake()
