@@ -5,7 +5,6 @@ using UnityEngine;
 public class ShowPersonOptions : MonoBehaviour {
 
 	public GameObject[] spawners;
-
 	//Agregar caso se aprieta otra silla, con nombre o tag del objeto
 	void OnMouseDown() 
 	{
@@ -20,7 +19,6 @@ public class ShowPersonOptions : MonoBehaviour {
 					GeneratePersonSpawner(i);
 				}
 			}
-			GameManager.instance.ShowingPersons = true;
 			GameManager.instance.SillaUsada = gameObject.name;
 			Debug.Log ("genere los spawners");
 		}

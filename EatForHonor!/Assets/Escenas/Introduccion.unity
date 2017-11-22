@@ -275,7 +275,7 @@ RectTransform:
   m_GameObject: {fileID: 342967089}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 90}
-  m_LocalScale: {x: 0.03360524, y: 0.03360524, z: 0.03360524}
+  m_LocalScale: {x: 0.013020833, y: 0.013020833, z: 0.013020833}
   m_Children:
   - {fileID: 980453193}
   - {fileID: 640856684}
@@ -959,7 +959,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   botones:
   - {fileID: 980453194}
-  Linkto: etapa1
+  Linkto: Stage1
 --- !u!4 &1492435136
 Transform:
   m_ObjectHideFlags: 0

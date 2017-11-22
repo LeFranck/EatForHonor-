@@ -16,9 +16,11 @@ public class GameManager : MonoBehaviour
 	//Variables para la generacion de personas en los distintos niveles
 	public GameObject[] TiposPersonas;
 	public int[] PersonasPermitidas = new int[4];
+
+	//Objeto encargado de la informacion de las etapas
+	public GameObject Info;
+
 	//Controlar que haya solo un ShowPersonOptionsAlavez
-	public bool ShowingPersons;
-	public bool CanShowPersons = true;
 	public int PersonTaken = -1;
 	public string SillaUsada = "";
 
@@ -39,6 +41,9 @@ public class GameManager : MonoBehaviour
 	void InitGame()
 	{
 		SceneManager.LoadScene (stage);
+		Info.gameObject.SetActive(false);
+
+		//Info.GetComponent<Renderer> ().enabled = false;
 		//menuController.LoadScene(stage);
 	}
 

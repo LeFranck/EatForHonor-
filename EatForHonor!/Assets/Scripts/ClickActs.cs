@@ -28,6 +28,7 @@ public class ClickActs : MonoBehaviour
 		GameManager.instance.previewStage = GameManager.instance.stage;
 		GameManager.instance.stage = Linkto;
 		SceneManager.LoadScene (Linkto);
+		EnabledInfo (Linkto);
     }
 
 	void VolverOnClick()
@@ -36,5 +37,13 @@ public class ClickActs : MonoBehaviour
 		GameManager.instance.previewStage = GameManager.instance.stage;
 		GameManager.instance.stage = aux;
 		SceneManager.LoadScene (aux);
+		EnabledInfo (aux);
 	}
+
+	private void EnabledInfo(string nextStage){
+		if (nextStage.Contains ("Stage")) {
+			GameManager.instance.Info.gameObject.SetActive(true);
+		}
+	}
+
 }

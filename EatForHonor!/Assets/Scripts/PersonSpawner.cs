@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class PersonSpawner : MonoBehaviour {
 	
@@ -17,6 +18,8 @@ public class PersonSpawner : MonoBehaviour {
 		Instantiate (GameManager.instance.TiposPersonas[TipoDePersona], SpawnPos.position, SpawnPos.rotation);
 		GameManager.instance.PersonTaken = TipoDePersona;
 		GameManager.instance.PersonasPermitidas [TipoDePersona] -= 1;
+		string TextName = String.Concat ("txt", TipoDePersona+1);
+		GameManager.instance.Info.transform.Find (TextName).GetComponent<TextMesh> ().text = GameManager.instance.PersonasPermitidas [TipoDePersona]+"";
 	}
 
 	// Use this for initialization
