@@ -148,10 +148,8 @@ MonoBehaviour:
   - {fileID: 1733298920184714, guid: 356d1a00a030f7545a2a43d648633f4a, type: 2}
   - {fileID: 1610524005252114, guid: 6e25b5325f9598b47818569b61cbf1d8, type: 2}
   - {fileID: 1619447673507512, guid: 148f83429fcedcb44a07f16eb5ffbe00, type: 2}
-  Info: {fileID: 1013618316}
   PersonasPermitidas: 01000000010000000100000001000000
-  ShowingPersons: 0
-  CanShowPersons: 1
+  Info: {fileID: 1013618316}
   PersonTaken: -1
   SillaUsada: 
 --- !u!4 &9389128
@@ -163,7 +161,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.1803592, y: -1.2095137, z: -0.14046364}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1013618317}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -505,7 +504,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1013618316}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.8, y: -4.5, z: 0}
+  m_LocalPosition: {x: 8.980359, y: -3.2904863, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1631174323}
@@ -520,8 +519,8 @@ Transform:
   - {fileID: 684103245}
   - {fileID: 1666450128}
   - {fileID: 2069174339}
-  m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_Father: {fileID: 9389128}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1089518382
 GameObject:

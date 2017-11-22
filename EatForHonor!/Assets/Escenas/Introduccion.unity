@@ -959,7 +959,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   botones:
   - {fileID: 980453194}
-  Linkto: Stage1
+  Linkto: Stage2
 --- !u!4 &1492435136
 Transform:
   m_ObjectHideFlags: 0
