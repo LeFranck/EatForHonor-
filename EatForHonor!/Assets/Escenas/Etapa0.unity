@@ -142,6 +142,8 @@ MonoBehaviour:
   stage: MainMenu
   previewStage: 
   score: 0
+  honor: 0
+  deshonor: 0
   checkin_if_sublimeworks: 10
   TiposPersonas:
   - {fileID: 1471128350796698, guid: 343d24368a3ef574b9856de669735cc4, type: 2}
@@ -250,7 +252,7 @@ GameObject:
   - component: {fileID: 330579069}
   - component: {fileID: 330579068}
   m_Layer: 0
-  m_Name: txt5
+  m_Name: txtDeshonor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -276,7 +278,7 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 330579066}
-  m_Text: 1
+  m_Text: 0
   m_OffsetZ: 0
   m_CharacterSize: 1
   m_LineSpacing: 1
@@ -764,7 +766,7 @@ GameObject:
   - component: {fileID: 1354041020}
   - component: {fileID: 1354041019}
   m_Layer: 0
-  m_Name: txt6
+  m_Name: txtHonor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -790,7 +792,7 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1354041017}
-  m_Text: 1
+  m_Text: 0
   m_OffsetZ: 0
   m_CharacterSize: 1
   m_LineSpacing: 1
