@@ -12,11 +12,16 @@ public class FollowPath : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
 	{
-		if (transform.position != path.points [current].position) {
+		if (transform.position != path.points [current].position) 
+		{
 			Vector2 pos = Vector2.MoveTowards (transform.position, path.points [current].position, speed * Time.deltaTime);
 			GetComponent<Rigidbody2D> ().MovePosition (pos);
 		} 
-		else 
+		else if(current == path.Npoints-1)
+		{
+			Destroy (this);
+		}
+		else
 		{
 			current += 1;
 		}

@@ -8,9 +8,15 @@ public class GameManager : MonoBehaviour
 {
 
 	public static GameManager instance = null;
+
+	//Variables encargadas de los cambios de etapa
 	public string stage = "MainMenu"; 
 	public string previewStage;
+
+	//Variables encargadas de los puntajes y condiciones de victoria/derrota
 	public int score = 0;
+	public int honor = 0;
+	public int deshonor = 0;
 	public int checkin_if_sublimeworks = 10;
 
 	//Variables para la generacion de personas en los distintos niveles

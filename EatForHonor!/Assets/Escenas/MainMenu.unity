@@ -606,7 +606,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   botones:
   - {fileID: 1926806923}
-  Linkto: Introduccion
+  Linkto: Stage2
 --- !u!4 &1105865199
 Transform:
   m_ObjectHideFlags: 0
@@ -703,7 +703,7 @@ RectTransform:
   m_GameObject: {fileID: 1504760411}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 90}
-  m_LocalScale: {x: 0.41916266, y: 0.41916266, z: 0.41916266}
+  m_LocalScale: {x: 0.1624106, y: 0.1624106, z: 0.1624106}
   m_Children:
   - {fileID: 1926806922}
   - {fileID: 123651585}
