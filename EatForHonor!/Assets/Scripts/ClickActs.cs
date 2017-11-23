@@ -20,11 +20,14 @@ public class ClickActs : MonoBehaviour
 			} else {
 				btn.onClick.AddListener (VolverOnClick);
 			}
+			if (btn.name == "btnLoser" || btn.name == "btnWinner") {
+				btn.onClick.AddListener (TurnOffvictory);
+			}
 		}
     }
 
     void TaskOnClick()
-    {
+	{
 		GameManager.instance.previewStage = GameManager.instance.stage;
 		GameManager.instance.stage = Linkto;
 		SceneManager.LoadScene (Linkto);
@@ -38,6 +41,11 @@ public class ClickActs : MonoBehaviour
 		GameManager.instance.stage = aux;
 		SceneManager.LoadScene (aux);
 		EnabledInfo (aux);
+	}
+
+	void TurnOffvictory()
+	{
+		GameManager.instance.TurnOffButtons ();
 	}
 
 	private void EnabledInfo(string nextStage){

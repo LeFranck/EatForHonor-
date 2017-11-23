@@ -13,7 +13,7 @@ public class BeginActs : MonoBehaviour {
 			FoodSpawners [i].GetComponent<EnemySpawner> ().enabled = true;
 			Debug.Log("foodspawner");
 		}
-		Destroy (gameObject);
+		Destroy (gameObject.GetComponent<SpriteRenderer>());
 	}
 
 	// Use this for initialization
@@ -23,6 +23,17 @@ public class BeginActs : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+		int check = 0;
+		for (int i = 0; i < FoodSpawners.Length; i++) 
+		{
+			if (FoodSpawners[i].GetComponent<EnemySpawner>().nextWave >= FoodSpawners[i].GetComponent<EnemySpawner>().waves.Length)
+			{
+				check += 1;
+			}
+		}
+		if (check == FoodSpawners.Length) 
+		{
+			GameManager.instance.HasWaves = false;
+		}
 	}
 }
