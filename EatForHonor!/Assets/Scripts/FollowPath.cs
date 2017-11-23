@@ -7,7 +7,7 @@ public class FollowPath : MonoBehaviour {
 	// Use this for initialization
 	public PathRail path;
 	public int speed;
-	private int current = 0;
+	public int current = 0;
 
 	// Update is called once per frame
 	void Update ()

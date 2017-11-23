@@ -13,12 +13,12 @@ public class EnemySpawner : MonoBehaviour {
 	public Wave[] waves;
 	public float timeBetweenWaves = 5f;
 	public float waveCountdown;
-	public int X = 0;
-	public int Y = 0;
+
+	public GameObject[] Paths;
 
 	void Start()
 	{
-        this.enabled = true;
+        this.enabled = false;
 		waveCountdown = timeBetweenWaves;
 	}
 
@@ -46,7 +46,7 @@ public class EnemySpawner : MonoBehaviour {
 			{
 				StartCoroutine (SpawnWave (waves [nextWave]));
                 //Posiblw cagaso
-                waveCountdown = 4f;
+                //waveCountdown = 4f;
             }
 		}
 		else 
@@ -89,8 +89,9 @@ public class EnemySpawner : MonoBehaviour {
 	{
 		Debug.Log("Spawing enemy " + enemy.name);
 		Vector3 a = transform.position;
-		a.x = a.x + X;
-		a.y = a.y + Y;
+		int rdn = Random.Range (0,Paths.Length -1);
+		enemy.GetComponent<FollowPath>().path = Paths[rdn].GetComponent<PathRail>();
+
 		Instantiate (enemy, a, transform.rotation);
 	}
 

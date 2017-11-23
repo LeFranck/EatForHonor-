@@ -25,6 +25,7 @@ public class FoodActs : MonoBehaviour {
 				collision.transform.GetComponent<PersonActs>().comiendo = true;
 				collision.transform.GetComponent<SpriteRenderer> ().sprite = collision.transform.GetComponent<PersonActs> ().spriteComiendo;
 				collision.transform.GetComponent<PersonActs> ().countdownCheck = 5f;
+				collision.transform.GetComponent<CircleCollider2D> ().radius = collision.transform.GetComponent<CircleCollider2D> ().radius / 3;
 				transform.GetComponent<life>().health -= 1;
 				int vida = transform.GetComponent<life>().health;
 				if (vida == 3) {

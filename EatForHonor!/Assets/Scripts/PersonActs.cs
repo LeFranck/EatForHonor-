@@ -19,8 +19,10 @@ public class PersonActs : MonoBehaviour {
 			if (comiendo) {
 				comiendo = false;
 				transform.GetComponent<SpriteRenderer> ().sprite = spriteNormal;
+				transform.GetComponent<CircleCollider2D> ().radius = transform.GetComponent<CircleCollider2D> ().radius * 3;
 			} 
 			countdownCheck = 4f;
+
 		} else {
 			countdownCheck -= Time.deltaTime;
 		}

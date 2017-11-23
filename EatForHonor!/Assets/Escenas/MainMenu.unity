@@ -606,7 +606,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   botones:
   - {fileID: 1926806923}
-  Linkto: Stage2
+  Linkto: Introduccion
 --- !u!4 &1105865199
 Transform:
   m_ObjectHideFlags: 0
