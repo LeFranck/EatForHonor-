@@ -20,13 +20,13 @@ public class ClickActs : MonoBehaviour
 			} else {
 				btn.onClick.AddListener (VolverOnClick);
 			}
-			if (btn.name == "btnLoser" || btn.name == "btnWinner") {
-				btn.onClick.AddListener (TurnOffvictory);
-			}
+			//if (btn.name == "btnLoser" || btn.name == "btnWinner") {
+			//	btn.onClick.AddListener (TurnOffvictory);
+			//}
 		}
     }
 
-    void TaskOnClick()
+    public void TaskOnClick()
 	{
 		GameManager.instance.previewStage = GameManager.instance.stage;
 		GameManager.instance.stage = Linkto;
@@ -43,10 +43,10 @@ public class ClickActs : MonoBehaviour
 		EnabledInfo (aux);
 	}
 
-	void TurnOffvictory()
-	{
-		GameManager.instance.TurnOffButtons ();
-	}
+	//void TurnOffvictory()
+	//{
+	//	GameManager.instance.TurnOffButtons ();
+	//}
 
 	private void EnabledInfo(string nextStage){
 		if (nextStage.Contains ("Stage")) {
