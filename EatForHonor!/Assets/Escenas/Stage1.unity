@@ -955,17 +955,17 @@ MonoBehaviour:
   nextWave: 0
   waves:
   - name: ola1
-    enemy: {fileID: 4646573476712306, guid: c2bc6f74cab0ba446b72b818e8505153, type: 2}
+    enemy: {fileID: 4616022712436818, guid: f5f1d213c311e62429caa6b5ba1fc92f, type: 2}
     count: 1
-    rate: 5
+    rate: 0.1
   - name: ola2
-    enemy: {fileID: 4270834483193886, guid: f5ef6e44f70e7ec4abb940b711c1b8d1, type: 2}
-    count: 1
-    rate: 5
-  - name: ola3
     enemy: {fileID: 4058629074678874, guid: f29352454f486c041ad05301006d1045, type: 2}
     count: 1
     rate: 5
+  - name: ola3
+    enemy: {fileID: 4120347472466492, guid: 153a8bbb28c618843ad8a3fb59f6f84f, type: 2}
+    count: 1
+    rate: 20
   timeBetweenWaves: 5
   waveCountdown: 3
   Paths:
