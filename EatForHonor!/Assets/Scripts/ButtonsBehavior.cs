@@ -25,22 +25,27 @@ public class ButtonsBehavior : MonoBehaviour {
         GameManager.instance.Info.transform.Find("txtHonor").GetComponent<TextMesh>().text = "0";
         GameManager.instance.Info.transform.Find("txtDeshonor").GetComponent<TextMesh>().text = "0";
 		if (GameManager.instance.numStage == 1) {
+			SoundManager.instance.music.clip = SoundManager.instance.stage1Music;
 			for (int i = 0; i < GameManager.instance.PersonasPermitidas.Length; i++) {
 				GameManager.instance.PersonasPermitidas [i] = GameManager.instance.PersonasPermitidasEtapa1 [i];
 			}
 		} else if (GameManager.instance.numStage == 2) {
+			SoundManager.instance.music.clip = SoundManager.instance.stage2Music;
 			for (int i = 0; i < GameManager.instance.PersonasPermitidas.Length; i++) {
 				GameManager.instance.PersonasPermitidas [i] = GameManager.instance.PersonasPermitidasEtapa2 [i];
 			}            
 		} else if (GameManager.instance.numStage == 3) {
+			SoundManager.instance.music.clip = SoundManager.instance.stage3Music;
 			for (int i = 0; i < GameManager.instance.PersonasPermitidas.Length; i++) {
 				GameManager.instance.PersonasPermitidas [i] = GameManager.instance.PersonasPermitidasEtapa3 [i];
 			}
 		} else if (GameManager.instance.numStage == 4) {
+			SoundManager.instance.music.clip = SoundManager.instance.stage4Music;
 			for (int i = 0; i < GameManager.instance.PersonasPermitidas.Length; i++) {
 				GameManager.instance.PersonasPermitidas [i] = GameManager.instance.PersonasPermitidasEtapa4 [i];
 			}
 		} else if (GameManager.instance.numStage == 5) {
+			SoundManager.instance.music.clip = SoundManager.instance.stage5Music;
 			for (int i = 0; i < GameManager.instance.PersonasPermitidas.Length; i++) {
 				GameManager.instance.PersonasPermitidas [i] = GameManager.instance.PersonasPermitidasEtapa5 [i];
 			}
@@ -52,6 +57,7 @@ public class ButtonsBehavior : MonoBehaviour {
 			Debug.Log("BERRU QLO");
 		}
 
+		SoundManager.instance.music.Play ();
 		GameManager.instance.deshonor = 0;
 		GameManager.instance.honor = 0;
         GameManager.instance.Info.transform.Find("txt1").GetComponent<TextMesh>().text = GameManager.instance.PersonasPermitidas[0] + "";
@@ -70,6 +76,8 @@ public class ButtonsBehavior : MonoBehaviour {
         GameManager.instance.Info.gameObject.SetActive(false);
         SceneManager.LoadScene("MainMenu");
         GameManager.instance.stage = "MainMenu";
+		SoundManager.instance.music.clip = SoundManager.instance.mainMusic;
+		SoundManager.instance.music.Play ();
     }
 
     public void intro()

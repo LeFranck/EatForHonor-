@@ -15,7 +15,7 @@ EditorBuildSettings:
     path: Assets/Escenas/notUsing/botonesqls.unity
     guid: 852fd2145ff75484893342ea517c57e9
   - enabled: 1
-    path: Assets/Escenas/Stage4.unity
+    path: Assets/Escenas/Stage4Berru.unity
     guid: bd36f49c8e815b942ae1ed3147e839bc
   - enabled: 1
     path: Assets/Escenas/Stage1.unity
@@ -24,11 +24,14 @@ EditorBuildSettings:
     path: Assets/Escenas/Next.unity
     guid: 661829352f01b0b4892c761790148e60
   - enabled: 1
-    path: Assets/Escenas/Stage3.unity
+    path: Assets/Escenas/Stage3Berru.unity
     guid: 7d5cc0cefc32a9545a48a73d02df7829
   - enabled: 1
     path: Assets/Escenas/stage5.unity
     guid: 642d99e00e04f354eb022ea7a87c419b
+  - enabled: 1
+    path: Assets/Escenas/Stage2.unity
+    guid: b2f1b58c588ffa64f9dbf055430d7da3
   - enabled: 1
     path: Assets/Escenas/notUsing/wut.unity
     guid: c37e3333da5452b4b9984af7a7931b98
@@ -42,10 +45,10 @@ EditorBuildSettings:
     path: Assets/Escenas/stage0.unity
     guid: ff6531cd328d5e140bd4274007d1e63e
   - enabled: 1
-    path: Assets/Escenas/Stage6.unity
+    path: Assets/Escenas/Stage4.unity
     guid: 72c31d11114d1fa4e83c294030c66b92
   - enabled: 1
-    path: Assets/Escenas/Stage2.unity
+    path: Assets/Escenas/Stage3.unity
     guid: 5d630cd1c646a0342b26ac9288034a95
   - enabled: 1
     path: Assets/Escenas/notUsing/Etapa0.unity

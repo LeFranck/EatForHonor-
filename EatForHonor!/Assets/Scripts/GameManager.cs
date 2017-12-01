@@ -53,6 +53,10 @@ public class GameManager : MonoBehaviour
 	//Variables para la generacion de olas
 	public bool HasWaves = true;
 
+	public AudioClip win;
+	public AudioClip lose;
+	public AudioClip clickea;
+
 	void Awake()
 	{
 		if (instance == null)
@@ -80,6 +84,7 @@ public class GameManager : MonoBehaviour
 			bool victory = Victory (numStage);
 			if (victory) {
                 //previewStage = stage;
+				SoundManager.instance.soundFood.clip = win;
                 numStage += 1;
                 stage = "Next";
                 SceneManager.LoadScene("Next");
@@ -88,6 +93,7 @@ public class GameManager : MonoBehaviour
                 //GameObject.Find ("btnWinner").GetComponent<UnityEngine.UI.Button> ().enabled = true;
             } else {
                 //previewStage = stage;
+				SoundManager.instance.soundFood.clip = lose;
                 stage = "Perdiste";
                 SceneManager.LoadScene("Perdiste");
                 //ta = Instantiate(TryAgain, new Vector3(-433.31f, -309.36f, 0), Quaternion.identity, canv);
@@ -96,6 +102,9 @@ public class GameManager : MonoBehaviour
                 //MainMenu.GetComponent<Button>().enabled = true;
                 //GameObject.Find ("btnLoser").GetComponent<UnityEngine.UI.Button> ().enabled = true;
             }
+			SoundManager.instance.soundFood.Play ();
+			SoundManager.instance.music.clip = SoundManager.instance.interStageMusic;
+			SoundManager.instance.music.Play ();
 		}
 	}
 

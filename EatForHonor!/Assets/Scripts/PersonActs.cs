@@ -15,6 +15,8 @@ public class PersonActs : MonoBehaviour {
 	public GameObject plateVacio;
     public Sprite[] mascadas = new Sprite[5];
     private int x = 0;
+	public AudioClip biteSound;
+	public AudioClip burp;
 	// Use this for initialization
 	void Start () {
 		
@@ -43,6 +45,8 @@ public class PersonActs : MonoBehaviour {
 					transform.GetComponent<SpriteRenderer> ().sprite = spriteComiendo;
 				} else {
 					transform.GetComponent<SpriteRenderer> ().sprite = spriteNormal;
+					SoundManager.instance.sound.clip = biteSound;
+					SoundManager.instance.sound.Play ();
 				}
 				variableBerru = 0.5f;
 			} else {
@@ -61,6 +65,11 @@ public class PersonActs : MonoBehaviour {
 			}
 		} else {
 			clock = 0.98f;
+		}
+
+		if (Random.Range (0, 15000) < 1) {
+			SoundManager.instance.sound.clip = burp;
+			SoundManager.instance.sound.Play ();
 		}
 			
 	}

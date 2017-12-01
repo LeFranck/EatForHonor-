@@ -91,9 +91,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75dc3b687cd3cd540b6c6af9a426e9c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  one_hit: {fileID: 21300000, guid: 09a53ada47ea3f646ad7c000b04773b5, type: 3}
-  two_hits: {fileID: 21300000, guid: ba442abf64a56d54aaf470c0c999cf34, type: 3}
-  three_hits: {fileID: 21300000, guid: b867c5f14e1736e42a3e8997a6ebfc96, type: 3}
+  one_hit: {fileID: 21300000, guid: 732be6ab521b9834b9b90fd49ae0e619, type: 3}
+  two_hits: {fileID: 21300000, guid: 93ae5341684ea0c40bf27bd71300d2e4, type: 3}
+  three_hits: {fileID: 21300000, guid: 77ee49347a5bc8d41bf7882655903c81, type: 3}
   four_hits: {fileID: 21300000, guid: 9b81ed5f490ba9f418871c4781f2dc26, type: 3}
   c0: {fileID: 21300000, guid: eb338bfdc18d1a7408da6a2bd881adb3, type: 3}
   c1: {fileID: 21300000, guid: 4e85b3f19a856934ba74fc3f979c91a7, type: 3}

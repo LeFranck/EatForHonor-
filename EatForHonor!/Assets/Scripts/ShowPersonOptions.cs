@@ -13,6 +13,8 @@ public class ShowPersonOptions : MonoBehaviour {
 
 		//Generar spawners y setear sillaUsada
 		if (GameManager.instance.SillaUsada == "") {
+			SoundManager.instance.soundFood.clip = GameManager.instance.clickea;
+			SoundManager.instance.soundFood.Play ();
 			for (int i = 0; i < GameManager.instance.PersonasPermitidas.Length; i++) 
 			{
 				if (GameManager.instance.PersonasPermitidas [i] > 0) 

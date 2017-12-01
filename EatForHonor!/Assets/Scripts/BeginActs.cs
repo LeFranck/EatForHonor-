@@ -8,6 +8,8 @@ public class BeginActs : MonoBehaviour {
 
 	void OnMouseDown()
 	{
+		SoundManager.instance.soundFood.clip = GameManager.instance.clickea;
+		SoundManager.instance.soundFood.Play ();
 		for (int i = 0; i < FoodSpawners.Length; i++) 
 		{
 			FoodSpawners [i].GetComponent<EnemySpawner> ().enabled = true;

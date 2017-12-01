@@ -83,6 +83,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  biteSound: {fileID: 8300000, guid: 48c3688fba01c154c9a771480ac4eb37, type: 3}
+  burp: {fileID: 8300000, guid: a50a4c7efdc164841afde34fe9c4441d, type: 3}
 --- !u!212 &212119480415035736
 SpriteRenderer:
   m_ObjectHideFlags: 1
