@@ -998,7 +998,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stage: MainMenu
   previewStage: 
-  numStage: 6
+  numStage: 1
   score: 0
   honor: 0
   deshonor: 0

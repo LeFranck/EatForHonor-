@@ -20,14 +20,11 @@ GameObject:
   m_Component:
   - component: {fileID: 4270834483193886}
   - component: {fileID: 212271455858050584}
-  - component: {fileID: 114134229717674712}
-  - component: {fileID: 60777098921239710}
-  - component: {fileID: 114190138179471666}
-  - component: {fileID: 114831989031518514}
   - component: {fileID: 50923999600118618}
   - component: {fileID: 114581209736892332}
-  - component: {fileID: 114802816943324408}
   - component: {fileID: 114681979738812372}
+  - component: {fileID: 58916267831881490}
+  - component: {fileID: 114949254962876260}
   m_Layer: 0
   m_Name: estofado
   m_TagString: Enemy
@@ -68,8 +65,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!60 &60777098921239710
-PolygonCollider2D:
+--- !u!58 &58916267831881490
+CircleCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -81,61 +78,8 @@ PolygonCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 10.01, y: 8.71}
-    newSize: {x: 13, y: 9.23}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: -6.5, y: 4.615}
-      - {x: -6.5, y: -4.615}
-      - {x: 6.5, y: -4.615}
-      - {x: 6.5, y: 4.615}
---- !u!114 &114134229717674712
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1622679663949280}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 56f95829b78c8de4aa59c859b1858dde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 10
---- !u!114 &114190138179471666
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1622679663949280}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 373b52eb9bf8c40f785bb6947a1aee66, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  version: 1
-  drawGizmos: 1
-  detailedGizmos: 0
-  startEndModifier:
-    addPoints: 0
-    exactStartPoint: 3
-    exactEndPoint: 3
-    useRaycasting: 0
-    mask:
-      serializedVersion: 2
-      m_Bits: 4294967295
-    useGraphRaycasting: 0
-  traversableTags: -1
-  traversableTagsCompatibility:
-    tagsChange: -1
-    tagsSet: -1
-  tagPenalties: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  serializedVersion: 2
+  m_Radius: 5.005
 --- !u!114 &114581209736892332
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -151,6 +95,11 @@ MonoBehaviour:
   two_hits: {fileID: 21300000, guid: 08622529718a8c24e8bed656e6f99f36, type: 3}
   three_hits: {fileID: 21300000, guid: 337903167b19f3f4aaf2c99012b8c465, type: 3}
   four_hits: {fileID: 21300000, guid: 26bbec8d5ee09754392b63be88b05ec2, type: 3}
+  c0: {fileID: 0}
+  c1: {fileID: 0}
+  c2: {fileID: 0}
+  c3: {fileID: 0}
+  c4: {fileID: 0}
 --- !u!114 &114681979738812372
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -163,7 +112,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 6
---- !u!114 &114802816943324408
+--- !u!114 &114949254962876260
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -171,37 +120,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1622679663949280}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f8e31c06c834a1c48b6a309fa07d3c73, type: 3}
+  m_Script: {fileID: 11500000, guid: e60ce13660e222341a8494ea7e5ea386, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114831989031518514
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1622679663949280}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f6eb1402c17e84a9282a7f0f62eb584f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  version: 1
-  gravity: {x: NaN, y: NaN, z: NaN}
-  groundMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  centerOffset: 1
-  rotationIn2D: 1
-  repathRate: 0.5
-  target: {fileID: 4960053713474404, guid: 8796efe0642d55a4db2fe50ed4c87d12, type: 2}
-  canSearch: 1
-  canMove: 1
+  path: {fileID: 0}
   speed: 3
-  rotationSpeed: 360
-  slowdownDistance: 0.6
-  pickNextWaypointDist: 2
-  endReachedDistance: 0.2
-  alwaysDrawGizmos: 0
+  current: 0
 --- !u!212 &212271455858050584
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -19,14 +19,12 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4646573476712306}
-  - component: {fileID: 114781558184464870}
-  - component: {fileID: 114064965123058832}
   - component: {fileID: 114308509179684530}
-  - component: {fileID: 60481126942952420}
   - component: {fileID: 50603445311552800}
   - component: {fileID: 114457048301671834}
   - component: {fileID: 212480691424234156}
-  - component: {fileID: 61989296799058078}
+  - component: {fileID: 114079951071158122}
+  - component: {fileID: 58781774495413342}
   m_Layer: 1
   m_Name: ensalada 2
   m_TagString: Enemy
@@ -67,8 +65,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!60 &60481126942952420
-PolygonCollider2D:
+--- !u!58 &58781774495413342
+CircleCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -80,48 +78,9 @@ PolygonCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.9, y: 0.92}
-    newSize: {x: 0.9, y: 0.92}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 0.050645065, y: 0.39225546}
-      - {x: -0.37707597, y: 0.15708089}
-      - {x: -0.31767637, y: -0.26879993}
-      - {x: 0.23326759, y: -0.3869724}
-      - {x: 0.3939579, y: 0.106435634}
---- !u!61 &61989296799058078
-BoxCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1213881606434174}
-  m_Enabled: 0
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.9, y: 0.92}
-    newSize: {x: 0.9, y: 0.92}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.9, y: 0.92}
-  m_EdgeRadius: 0
---- !u!114 &114064965123058832
+  m_Radius: 0.46
+--- !u!114 &114079951071158122
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -129,26 +88,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1213881606434174}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f6eb1402c17e84a9282a7f0f62eb584f, type: 3}
+  m_Script: {fileID: 11500000, guid: e60ce13660e222341a8494ea7e5ea386, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  version: 1
-  gravity: {x: 0, y: 0, z: 0}
-  groundMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  centerOffset: 1
-  rotationIn2D: 1
-  repathRate: 0.5
-  target: {fileID: 0}
-  canSearch: 1
-  canMove: 1
+  path: {fileID: 0}
   speed: 3
-  rotationSpeed: 360
-  slowdownDistance: 0.6
-  pickNextWaypointDist: 2
-  endReachedDistance: 0.2
-  alwaysDrawGizmos: 0
+  current: 0
 --- !u!114 &114308509179684530
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -164,6 +109,11 @@ MonoBehaviour:
   two_hits: {fileID: 21300000, guid: a55407583b68a624398428ea4e9f8e8a, type: 3}
   three_hits: {fileID: 21300000, guid: 8d55b799e908153438c7bfda17917432, type: 3}
   four_hits: {fileID: 21300000, guid: e54e8de95c0d07d4680946d4502c4710, type: 3}
+  c0: {fileID: 0}
+  c1: {fileID: 0}
+  c2: {fileID: 0}
+  c3: {fileID: 0}
+  c4: {fileID: 0}
 --- !u!114 &114457048301671834
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -176,34 +126,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 4
---- !u!114 &114781558184464870
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1213881606434174}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 373b52eb9bf8c40f785bb6947a1aee66, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  version: 1
-  drawGizmos: 1
-  detailedGizmos: 0
-  startEndModifier:
-    addPoints: 0
-    exactStartPoint: 3
-    exactEndPoint: 3
-    useRaycasting: 0
-    mask:
-      serializedVersion: 2
-      m_Bits: 4294967295
-    useGraphRaycasting: 0
-  traversableTags: -1
-  traversableTagsCompatibility:
-    tagsChange: -1
-    tagsSet: -1
-  tagPenalties: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
 --- !u!212 &212480691424234156
 SpriteRenderer:
   m_ObjectHideFlags: 1
