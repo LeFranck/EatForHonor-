@@ -40,13 +40,13 @@ public class ShowPersonOptions : MonoBehaviour {
 	public void GeneratePersonSpawner(int i){
 		Vector3 pos = new Vector3(transform.position.x, transform.position.y, 0);
 		if (i == 0) {
-			pos += new Vector3 (2, 2, 0);
+			pos += new Vector3 (2, 2, -2);
 		} else if (i == 1) {
-			pos += new Vector3 (2, -2, 0);
+			pos += new Vector3 (2, -2, -2);
 		} else if (i == 2) {
-			pos += new Vector3 (-2, -2, 0);
+			pos += new Vector3 (-2, -2, -2);
 		} else {
-			pos += new Vector3 (-2, 2, 0);
+			pos += new Vector3 (-2, 2, -2);
 		}
 
 		spawners[i] = new GameObject ();

@@ -52,6 +52,8 @@ public class ButtonsBehavior : MonoBehaviour {
 			Debug.Log("BERRU QLO");
 		}
 
+		GameManager.instance.deshonor = 0;
+		GameManager.instance.honor = 0;
         GameManager.instance.Info.transform.Find("txt1").GetComponent<TextMesh>().text = GameManager.instance.PersonasPermitidas[0] + "";
         GameManager.instance.Info.transform.Find("txt2").GetComponent<TextMesh>().text = GameManager.instance.PersonasPermitidas[1] + "";
         GameManager.instance.Info.transform.Find("txt3").GetComponent<TextMesh>().text = GameManager.instance.PersonasPermitidas[2] + "";

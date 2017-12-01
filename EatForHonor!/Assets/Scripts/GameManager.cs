@@ -103,24 +103,23 @@ public class GameManager : MonoBehaviour
 	private bool Victory(int stage)
 	{
 		//transform.Find("btnsLoser").GetComponent<ClickActs>().Linkto = previewStage;
-		if (stage == 1) 
-		{
+		if (stage == 1) {
 			//transform.Find("btnsWinner").GetComponent<ClickActs>().Linkto = "InterStage1";
 			return honor > deshonor;
-		}
-		else if (stage == 2) 
-		{
+		} else if (stage == 2) {
 			//transform.Find("btnsWinner").GetComponent<ClickActs>().Linkto = "InterStage2";
 			return 2 * deshonor < honor;	
-		}
-		else if (stage == 3) 
-		{
+		} else if (stage == 3) {
 			//transform.Find("btnsWinner").GetComponent<ClickActs>().Linkto = "InterStage3";
 			return deshonor == 0;
-		}
-		else 
-		{
+		} else if (stage == 4) {
 			return false;
+		} else if (stage == 5) {
+			return false;
+		} else if (stage == 6) {
+			return honor > 1;
+		} else {
+			return true;
 		}
 	}
 
