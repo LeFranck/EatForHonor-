@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4798267497837982}
   - component: {fileID: 212182470912474130}
   - component: {fileID: 58927676565913444}
-  - component: {fileID: 114842976880857662}
+  - component: {fileID: 114908746422763514}
   m_Layer: 0
   m_Name: Chair
   m_TagString: Untagged
@@ -35,8 +35,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1513563490181440}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.5, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -2.5, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -56,8 +56,8 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 1.2
---- !u!114 &114842976880857662
+  m_Radius: 1
+--- !u!114 &114908746422763514
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -68,7 +68,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64c82b95c0fb3124aa764b23801e562d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawners: []
+  spawners:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!212 &212182470912474130
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -102,11 +106,11 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 10
   m_Sprite: {fileID: 21300000, guid: ce332f7094a27974a8861b9982ba73ae, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
-  m_FlipY: 0
+  m_FlipY: 1
   m_DrawMode: 0
   m_Size: {x: 1.28, y: 1.28}
   m_AdaptiveModeThreshold: 0.5

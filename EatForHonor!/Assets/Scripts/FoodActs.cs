@@ -36,6 +36,9 @@ public class FoodActs : MonoBehaviour {
 					transform.GetComponent<SpriteRenderer>().sprite = three_hits;
 				} else {
 					transform.GetComponent<SpriteRenderer>().sprite = four_hits;
+					transform.localScale -= new Vector3 (transform.position.x * 0.2F, transform.position.y * 0.2F,0F);
+					//transform.localScale += new Vector3(0.1F, 0, 0);
+
 				}
 			}
 

@@ -27,6 +27,9 @@ EditorBuildSettings:
     path: Assets/Escenas/Stage3.unity
     guid: 7d5cc0cefc32a9545a48a73d02df7829
   - enabled: 1
+    path: Assets/Escenas/stage5.unity
+    guid: 642d99e00e04f354eb022ea7a87c419b
+  - enabled: 1
     path: Assets/Escenas/notUsing/wut.unity
     guid: c37e3333da5452b4b9984af7a7931b98
   - enabled: 1

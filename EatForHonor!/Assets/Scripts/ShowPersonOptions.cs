@@ -56,6 +56,7 @@ public class ShowPersonOptions : MonoBehaviour {
 		SpriteRenderer sr = GameManager.instance.TiposPersonas[i].GetComponent<SpriteRenderer> ();
 		spawners[i].AddComponent<SpriteRenderer>();
 		spawners[i].GetComponent<SpriteRenderer>().sprite = sr.sprite;
+		spawners [i].GetComponent<SpriteRenderer> ().sortingOrder = 20;
 		spawners[i].AddComponent<BoxCollider2D>();
 	}
 
@@ -76,6 +77,9 @@ public class ShowPersonOptions : MonoBehaviour {
 			}
 			GameManager.instance.PersonTaken = -1;
 			GameManager.instance.SillaUsada = "";
+			Vector3 pos = new Vector3(transform.position.x, transform.position.y, -10);
+			transform.position = pos;
+
 			Destroy (this);
 		}
 		
