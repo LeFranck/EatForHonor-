@@ -8,8 +8,13 @@ public class FoodActs : MonoBehaviour {
 	public Sprite two_hits;
 	public Sprite three_hits;
 	public Sprite four_hits;
-	// Use this for initialization
-	void Start () {
+    public Sprite c0;
+    public Sprite c1;
+    public Sprite c2;
+    public Sprite c3;
+    public Sprite c4;
+    // Use this for initialization
+    void Start () {
 		
 	}
 	

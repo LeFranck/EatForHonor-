@@ -38,10 +38,14 @@ public class GameManager : MonoBehaviour
 
 	//Variables para la generacion de personas en los distintos niveles
 	public GameObject[] TiposPersonas;
-	public int[] PersonasPermitidas = new int[4];
+    public int[] PersonasPermitidasEtapa1 = new int[4];
+    public int[] PersonasPermitidasEtapa2 = new int[4];
+    public int[] PersonasPermitidasEtapa3 = new int[4];
+    public int[] PersonasPermitidasEtapa4 = new int[4];
+    public int[] PersonasPermitidas = new int[4];
 
-	//Controlar que haya solo un ShowPersonOptionsAlavez
-	public int PersonTaken = -1;
+    //Controlar que haya solo un ShowPersonOptionsAlavez
+    public int PersonTaken = -1;
 	public string SillaUsada = "";
 
 	//Variables para la generacion de olas
