@@ -35,7 +35,8 @@ public class FoodActs : MonoBehaviour {
                 collision.transform.GetComponent<PersonActs>().comiendo = true;
 				//collision.transform.GetComponent<SpriteRenderer> ().sprite = collision.transform.GetComponent<PersonActs> ().spriteComiendo;
 				collision.transform.GetComponent<PersonActs> ().countdownCheck = 5f;
-                collision.transform.GetComponent<PersonActs>().plate.GetComponent<SpriteRenderer>().sprite = c0;
+				collision.transform.GetComponent<PersonActs>().plate.GetComponent<SpriteRenderer>().sprite = c0;
+				collision.transform.GetComponent<PersonActs>().plate.transform.localScale = new Vector3(0.25f, 0.25f, 1f);
                 collision.transform.GetComponent<CircleCollider2D> ().radius = collision.transform.GetComponent<CircleCollider2D> ().radius / 3;
 				transform.GetComponent<life>().health -= 1;
 				int vida = transform.GetComponent<life>().health;
@@ -47,7 +48,7 @@ public class FoodActs : MonoBehaviour {
 					transform.GetComponent<SpriteRenderer>().sprite = three_hits;
 				} else {
 					transform.GetComponent<SpriteRenderer>().sprite = four_hits;
-					transform.localScale -= new Vector3 (transform.position.x * 0.2F, transform.position.y * 0.2F,0F);
+					//transform.localScale -= new Vector3 (transform.position.x * 0.2F, transform.position.y * 0.2F,0F);
 					//transform.localScale += new Vector3(0.1F, 0, 0);
 
 				}

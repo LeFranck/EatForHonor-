@@ -48,6 +48,7 @@ public class ShowPersonOptions : MonoBehaviour {
 		} else {
 			pos += new Vector3 (-2, 2, 0);
 		}
+
 		spawners[i] = new GameObject ();
 		spawners[i].transform.position = pos;
 		spawners[i].AddComponent<PersonSpawner>();
@@ -58,14 +59,14 @@ public class ShowPersonOptions : MonoBehaviour {
         SpriteRenderer sr = GameManager.instance.TiposPersonas[i].GetComponent<SpriteRenderer> ();
 		spawners[i].AddComponent<SpriteRenderer>();
 		spawners[i].GetComponent<SpriteRenderer>().sprite = sr.sprite;
-		spawners [i].GetComponent<SpriteRenderer> ().sortingOrder = 20;
+		spawners[i].GetComponent<SpriteRenderer>().sortingOrder = 20;
 		spawners[i].AddComponent<BoxCollider2D>();
 	}
 
 	// Use this for initialization
 	void Start () {
 		spawners = new GameObject[4];
-		Debug.Log("inicialize Spawners vaciooo!!!");
+		//Debug.Log("inicialize Spawners vaciooo!!!");
 	}
 	
 	// Update is called once per frame

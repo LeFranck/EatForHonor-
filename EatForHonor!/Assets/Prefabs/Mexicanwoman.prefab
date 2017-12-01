@@ -72,6 +72,17 @@ MonoBehaviour:
   countdownCheck: 4
   spriteComiendo: {fileID: 21300000, guid: a6f56d8a04b84084bb5e291b2fa51728, type: 3}
   spriteNormal: {fileID: 21300000, guid: f93265e724916604fac052fc69da7133, type: 3}
+  variableBerru: 0.5
+  clock: 0.8
+  state: 1
+  plate: {fileID: 0}
+  plateVacio: {fileID: 1278410547532988, guid: 4e1caa02e161f104d823f883435c3421, type: 2}
+  mascadas:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!212 &212440633025957882
 SpriteRenderer:
   m_ObjectHideFlags: 1

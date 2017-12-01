@@ -94,12 +94,12 @@ MonoBehaviour:
   one_hit: {fileID: 21300000, guid: 09a53ada47ea3f646ad7c000b04773b5, type: 3}
   two_hits: {fileID: 21300000, guid: ba442abf64a56d54aaf470c0c999cf34, type: 3}
   three_hits: {fileID: 21300000, guid: b867c5f14e1736e42a3e8997a6ebfc96, type: 3}
-  four_hits: {fileID: 21300000, guid: 070c0dc8f0a965449b97e2c236bedf65, type: 3}
+  four_hits: {fileID: 21300000, guid: 9b81ed5f490ba9f418871c4781f2dc26, type: 3}
   c0: {fileID: 21300000, guid: eb338bfdc18d1a7408da6a2bd881adb3, type: 3}
   c1: {fileID: 21300000, guid: 4e85b3f19a856934ba74fc3f979c91a7, type: 3}
   c2: {fileID: 21300000, guid: 7dded505d6e103b4c95776eedd2f4e3e, type: 3}
   c3: {fileID: 21300000, guid: ef5a132a6f906224ca040caa2ba0ba04, type: 3}
-  c4: {fileID: 21300000, guid: 070c0dc8f0a965449b97e2c236bedf65, type: 3}
+  c4: {fileID: 21300000, guid: 9b81ed5f490ba9f418871c4781f2dc26, type: 3}
 --- !u!114 &114919882228151966
 MonoBehaviour:
   m_ObjectHideFlags: 1

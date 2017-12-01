@@ -14,7 +14,7 @@ public class GameManager : MonoBehaviour
 	//Variables encargadas de los cambios de etapa
 	public string stage = "MainMenu"; 
 	public string previewStage;
-    public int numStage = 2;
+    public int numStage;
 
 	//Variables encargadas de los puntajes y condiciones de victoria/derrota
 	public int score = 0;
@@ -41,7 +41,9 @@ public class GameManager : MonoBehaviour
     public int[] PersonasPermitidasEtapa1 = new int[4];
     public int[] PersonasPermitidasEtapa2 = new int[4];
     public int[] PersonasPermitidasEtapa3 = new int[4];
-    public int[] PersonasPermitidasEtapa4 = new int[4];
+	public int[] PersonasPermitidasEtapa4 = new int[4];
+	public int[] PersonasPermitidasEtapa5 = new int[4];
+	public int[] PersonasPermitidasEtapa6 = new int[4];
     public int[] PersonasPermitidas = new int[4];
 
     //Controlar que haya solo un ShowPersonOptionsAlavez

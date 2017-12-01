@@ -28,7 +28,7 @@ public class PersonSpawner : MonoBehaviour {
 
 	void Awake(){
 		Debug.Log ("hola, soy awake");
-		gameObject.transform.localScale = new Vector3 (0.3f,0.3f,1f);
+		gameObject.transform.localScale = new Vector3 (0.3f,0.3f,0f);
 
 	}
 
