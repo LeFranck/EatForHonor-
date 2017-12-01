@@ -25,19 +25,27 @@ public class ButtonsBehavior : MonoBehaviour {
         GameManager.instance.Info.transform.Find("txtHonor").GetComponent<TextMesh>().text = "0";
         GameManager.instance.Info.transform.Find("txtDeshonor").GetComponent<TextMesh>().text = "0";
 		if (GameManager.instance.numStage == 1) {
-			for (int i = 0; i < GameManager.instance.PersonasPermitidas.Length; i++) {
+            SoundManager.instance.music.clip = SoundManager.instance.stage1Music;
+            SoundManager.instance.music.Play();
+            for (int i = 0; i < GameManager.instance.PersonasPermitidas.Length; i++) {
 				GameManager.instance.PersonasPermitidas [i] = GameManager.instance.PersonasPermitidasEtapa1 [i];
 			}
 		} else if (GameManager.instance.numStage == 2) {
-			for (int i = 0; i < GameManager.instance.PersonasPermitidas.Length; i++) {
+            SoundManager.instance.music.clip = SoundManager.instance.stage2Music;
+            SoundManager.instance.music.Play();
+            for (int i = 0; i < GameManager.instance.PersonasPermitidas.Length; i++) {
 				GameManager.instance.PersonasPermitidas [i] = GameManager.instance.PersonasPermitidasEtapa2 [i];
 			}            
 		} else if (GameManager.instance.numStage == 3) {
-			for (int i = 0; i < GameManager.instance.PersonasPermitidas.Length; i++) {
+            SoundManager.instance.music.clip = SoundManager.instance.stage3Music;
+            SoundManager.instance.music.Play();
+            for (int i = 0; i < GameManager.instance.PersonasPermitidas.Length; i++) {
 				GameManager.instance.PersonasPermitidas [i] = GameManager.instance.PersonasPermitidasEtapa3 [i];
 			}
 		} else if (GameManager.instance.numStage == 4) {
-			for (int i = 0; i < GameManager.instance.PersonasPermitidas.Length; i++) {
+            SoundManager.instance.music.clip = SoundManager.instance.stage4Music;
+            SoundManager.instance.music.Play();
+            for (int i = 0; i < GameManager.instance.PersonasPermitidas.Length; i++) {
 				GameManager.instance.PersonasPermitidas [i] = GameManager.instance.PersonasPermitidasEtapa4 [i];
 			}
 		} else if (GameManager.instance.numStage == 5) {
@@ -68,6 +76,8 @@ public class ButtonsBehavior : MonoBehaviour {
         GameManager.instance.Info.gameObject.SetActive(false);
         SceneManager.LoadScene("MainMenu");
         GameManager.instance.stage = "MainMenu";
+        SoundManager.instance.music.clip = SoundManager.instance.mainMusic;
+        SoundManager.instance.music.Play();
     }
 
     public void intro()
@@ -75,6 +85,8 @@ public class ButtonsBehavior : MonoBehaviour {
         Debug.Log("intro");
         SceneManager.LoadScene("Introduccion");
         GameManager.instance.stage = "Introduccion";
+        SoundManager.instance.music.clip = SoundManager.instance.stage1Music;
+        SoundManager.instance.music.Play();
     }
 
     public void conf()

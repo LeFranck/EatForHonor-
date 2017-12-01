@@ -15,6 +15,8 @@ public class PersonActs : MonoBehaviour {
 	public GameObject plateVacio;
     public Sprite[] mascadas = new Sprite[5];
     private int x = 0;
+    public AudioClip biteSound;
+
 	// Use this for initialization
 	void Start () {
 		
