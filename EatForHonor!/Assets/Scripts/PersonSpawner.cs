@@ -6,7 +6,8 @@ using System;
 public class PersonSpawner : MonoBehaviour {
 	
 	public int TipoDePersona;
-	public Transform SpawnPos;
+    public Transform SpawnPos;
+    public GameObject plate;
 	//public SpriteRenderer sr;
 
 	void OnMouseDown() {
@@ -15,8 +16,9 @@ public class PersonSpawner : MonoBehaviour {
 
 	public void PersonSpawn()
 	{
-		Instantiate (GameManager.instance.TiposPersonas[TipoDePersona], SpawnPos.position, SpawnPos.rotation);
-		GameManager.instance.PersonTaken = TipoDePersona;
+		GameObject x = Instantiate (GameManager.instance.TiposPersonas[TipoDePersona], SpawnPos.position, SpawnPos.rotation);
+        x.GetComponent<PersonActs>().plate = plate;
+        GameManager.instance.PersonTaken = TipoDePersona;
 		GameManager.instance.PersonasPermitidas [TipoDePersona] -= 1;
 		string TextName = String.Concat ("txt", TipoDePersona+1);
 		GameManager.instance.Info.transform.Find (TextName).GetComponent<TextMesh> ().text = GameManager.instance.PersonasPermitidas [TipoDePersona]+"";

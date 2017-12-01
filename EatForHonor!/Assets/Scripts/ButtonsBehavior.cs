@@ -24,7 +24,6 @@ public class ButtonsBehavior : MonoBehaviour {
         GameManager.instance.HasWaves = true;
         GameManager.instance.Info.transform.Find("txtHonor").GetComponent<TextMesh>().text = "0";
         GameManager.instance.Info.transform.Find("txtDeshonor").GetComponent<TextMesh>().text = "0";
-        //SceneManager.LoadScene("Stage2");
         if (GameManager.instance.numStage == 1)
         {
             for (int i = 0; i < GameManager.instance.PersonasPermitidas.Length; i++)
@@ -62,6 +61,7 @@ public class ButtonsBehavior : MonoBehaviour {
         GameManager.instance.Info.transform.Find("txt3").GetComponent<TextMesh>().text = GameManager.instance.PersonasPermitidas[2] + "";
         GameManager.instance.Info.transform.Find("txt4").GetComponent<TextMesh>().text = GameManager.instance.PersonasPermitidas[3] + "";
         SceneManager.LoadScene("Stage" + GameManager.instance.numStage.ToString());
+        //SceneManager.LoadScene("Stage3");
         GameManager.instance.stage = "Stage" + GameManager.instance.numStage.ToString();
         GameManager.instance.Info.gameObject.SetActive(true);
     }

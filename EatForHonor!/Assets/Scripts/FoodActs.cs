@@ -27,10 +27,16 @@ public class FoodActs : MonoBehaviour {
 		if (collision.gameObject.tag == "Persona") 
 		{
 			if (collision.transform.GetComponent<PersonActs> ().comiendo != true) {
-				collision.transform.GetComponent<PersonActs>().comiendo = true;
-				collision.transform.GetComponent<SpriteRenderer> ().sprite = collision.transform.GetComponent<PersonActs> ().spriteComiendo;
+                collision.transform.GetComponent<PersonActs>().mascadas[0] = c0;
+                collision.transform.GetComponent<PersonActs>().mascadas[1] = c1;
+                collision.transform.GetComponent<PersonActs>().mascadas[2] = c2;
+                collision.transform.GetComponent<PersonActs>().mascadas[3] = c3;
+                collision.transform.GetComponent<PersonActs>().mascadas[4] = c4;
+                collision.transform.GetComponent<PersonActs>().comiendo = true;
+				//collision.transform.GetComponent<SpriteRenderer> ().sprite = collision.transform.GetComponent<PersonActs> ().spriteComiendo;
 				collision.transform.GetComponent<PersonActs> ().countdownCheck = 5f;
-				collision.transform.GetComponent<CircleCollider2D> ().radius = collision.transform.GetComponent<CircleCollider2D> ().radius / 3;
+                collision.transform.GetComponent<PersonActs>().plate.GetComponent<SpriteRenderer>().sprite = c0;
+                collision.transform.GetComponent<CircleCollider2D> ().radius = collision.transform.GetComponent<CircleCollider2D> ().radius / 3;
 				transform.GetComponent<life>().health -= 1;
 				int vida = transform.GetComponent<life>().health;
 				if (vida == 3) {

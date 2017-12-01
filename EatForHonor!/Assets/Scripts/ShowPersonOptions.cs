@@ -5,6 +5,7 @@ using UnityEngine;
 public class ShowPersonOptions : MonoBehaviour {
 
 	public GameObject[] spawners;
+    public GameObject plate;
 	//Agregar caso se aprieta otra silla, con nombre o tag del objeto
 	void OnMouseDown() 
 	{
@@ -52,8 +53,9 @@ public class ShowPersonOptions : MonoBehaviour {
 		spawners[i].AddComponent<PersonSpawner>();
 		spawners[i].GetComponent<PersonSpawner>().SpawnPos = transform;
 		spawners[i].GetComponent<PersonSpawner>().TipoDePersona = i;
+        spawners[i].GetComponent<PersonSpawner>().plate = plate;
 
-		SpriteRenderer sr = GameManager.instance.TiposPersonas[i].GetComponent<SpriteRenderer> ();
+        SpriteRenderer sr = GameManager.instance.TiposPersonas[i].GetComponent<SpriteRenderer> ();
 		spawners[i].AddComponent<SpriteRenderer>();
 		spawners[i].GetComponent<SpriteRenderer>().sprite = sr.sprite;
 		spawners[i].AddComponent<BoxCollider2D>();

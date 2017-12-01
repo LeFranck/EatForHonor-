@@ -1254,7 +1254,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4798267497837982, guid: 7a2a8d6d54b833f47855bd8b6e151ab9, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1513563490181440, guid: 7a2a8d6d54b833f47855bd8b6e151ab9, type: 2}
       propertyPath: m_Name
@@ -1636,7 +1636,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4798267497837982, guid: 7a2a8d6d54b833f47855bd8b6e151ab9, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1513563490181440, guid: 7a2a8d6d54b833f47855bd8b6e151ab9, type: 2}
       propertyPath: m_Name
@@ -1661,6 +1661,16 @@ Prefab:
       propertyPath: m_FlipY
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114842976880857662, guid: 7a2a8d6d54b833f47855bd8b6e151ab9,
+        type: 2}
+      propertyPath: spawners.Array.data[0]
+      value: 
+      objectReference: {fileID: 1602255908}
+    - target: {fileID: 114842976880857662, guid: 7a2a8d6d54b833f47855bd8b6e151ab9,
+        type: 2}
+      propertyPath: plate
+      value: 
+      objectReference: {fileID: 1602255908}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7a2a8d6d54b833f47855bd8b6e151ab9, type: 2}
   m_IsPrefabParent: 0
@@ -1680,7 +1690,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1577617293}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 218164fe34b3aae48a1de84c32009c22, type: 3}
   m_Name: 
@@ -1736,7 +1746,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: fc78bacf35174274aaa6df93ccb2c687, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1744,7 +1754,7 @@ SpriteRenderer:
   m_Size: {x: 1.28, y: 1.28}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
 --- !u!4 &1602255910
 Transform:
