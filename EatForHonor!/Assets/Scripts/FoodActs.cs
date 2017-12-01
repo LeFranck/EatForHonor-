@@ -13,6 +13,7 @@ public class FoodActs : MonoBehaviour {
     public Sprite c2;
     public Sprite c3;
     public Sprite c4;
+	public double modificador = 0.0;
     // Use this for initialization
     void Start () {
 		
@@ -24,7 +25,7 @@ public class FoodActs : MonoBehaviour {
 
 	void OnCollisionEnter2D(Collision2D collision)
 	{
-		if (collision.gameObject.tag == "Persona") 
+		if (collision.gameObject.tag == "Persona" && transform.GetComponent<life>().health > 0.0) 
 		{
 			if (collision.transform.GetComponent<PersonActs> ().comiendo != true) {
                 collision.transform.GetComponent<PersonActs>().mascadas[0] = c0;
@@ -38,24 +39,35 @@ public class FoodActs : MonoBehaviour {
 				collision.transform.GetComponent<PersonActs>().plate.GetComponent<SpriteRenderer>().sprite = c0;
 				collision.transform.GetComponent<PersonActs>().plate.transform.localScale = new Vector3(0.25f, 0.25f, 1f);
                 collision.transform.GetComponent<CircleCollider2D> ().radius = collision.transform.GetComponent<CircleCollider2D> ().radius / 3;
-				transform.GetComponent<life>().health -= 1;
-				int vida = transform.GetComponent<life>().health;
-				if (vida == 3) {
+				modificador = 0.0;
+				if (collision.gameObject.name.Contains("MexicanBoy")) {
+					modificador = 1.2;
+				} else if (collision.gameObject.name.Contains("MexicanMan")) {
+					modificador = 1.5;
+				} else if (collision.gameObject.name.Contains("MrxicanGirl")) {
+					modificador = 0.8;
+				} else if (collision.gameObject.name.Contains("Mexicanwoman")) {
+					modificador = 1.1;
+				}
+
+					
+				transform.GetComponent<life>().health -= modificador;
+				double vida = transform.GetComponent<life>().health;
+				if (vida >= 2.8 && vida < 4.0) {
 					transform.GetComponent<SpriteRenderer>().sprite = one_hit;
-				} else if (vida == 2) {
+				} else if (vida >= 1.5 && vida < 2.8) {
 					transform.GetComponent<SpriteRenderer>().sprite = two_hits;
-				} else if (vida == 1) {
+				} else if (vida > 0.0 && vida < 1.5) {
 					transform.GetComponent<SpriteRenderer>().sprite = three_hits;
 				} else {
+					transform.GetComponent<life>().health = 0.0;
 					transform.GetComponent<SpriteRenderer>().sprite = four_hits;
+					transform.GetComponent<CircleCollider2D> ().radius = 0.2f;
 					//transform.localScale -= new Vector3 (transform.position.x * 0.2F, transform.position.y * 0.2F,0F);
 					//transform.localScale += new Vector3(0.1F, 0, 0);
-
 				}
 			}
 
-		}else {
-			Debug.Log ("WOOOOLA");
 		}
 	}
 }

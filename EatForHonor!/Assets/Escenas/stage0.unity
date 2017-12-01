@@ -1293,7 +1293,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stage: MainMenu
   previewStage: 
-  numStage: 2
+  numStage: 1
   score: 0
   honor: 0
   deshonor: 0
@@ -1308,9 +1308,9 @@ MonoBehaviour:
   - {fileID: 1610524005252114, guid: 6e25b5325f9598b47818569b61cbf1d8, type: 2}
   - {fileID: 1619447673507512, guid: 148f83429fcedcb44a07f16eb5ffbe00, type: 2}
   PersonasPermitidasEtapa1: 01000000010000000100000001000000
-  PersonasPermitidasEtapa2: 01000000010000000100000001000000
-  PersonasPermitidasEtapa3: 01000000010000000100000001000000
-  PersonasPermitidasEtapa4: 01000000010000000100000001000000
+  PersonasPermitidasEtapa2: 03000000030000000300000003000000
+  PersonasPermitidasEtapa3: 02000000010000000100000002000000
+  PersonasPermitidasEtapa4: 01000000020000000200000002000000
   PersonasPermitidasEtapa5: 00000000000000000000000000000000
   PersonasPermitidasEtapa6: 02000000020000000100000001000000
   PersonasPermitidas: 01000000010000000100000001000000

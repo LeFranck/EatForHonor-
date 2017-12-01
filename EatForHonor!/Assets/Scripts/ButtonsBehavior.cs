@@ -22,6 +22,7 @@ public class ButtonsBehavior : MonoBehaviour {
     {
         Debug.Log(to);
         GameManager.instance.HasWaves = true;
+		
         GameManager.instance.Info.transform.Find("txtHonor").GetComponent<TextMesh>().text = "0";
         GameManager.instance.Info.transform.Find("txtDeshonor").GetComponent<TextMesh>().text = "0";
 		if (GameManager.instance.numStage == 1) {

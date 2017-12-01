@@ -1585,14 +1585,17 @@ MonoBehaviour:
     enemy: {fileID: 4058629074678874, guid: f29352454f486c041ad05301006d1045, type: 2}
     count: 3
     rate: 5
+    speed: 3
   - name: ola2
     enemy: {fileID: 4058629074678874, guid: f29352454f486c041ad05301006d1045, type: 2}
     count: 6
     rate: 5
+    speed: 3
   - name: ola3
     enemy: {fileID: 4058629074678874, guid: f29352454f486c041ad05301006d1045, type: 2}
     count: 9
     rate: 5
+    speed: 3
   timeBetweenWaves: 5
   waveCountdown: 3
   Paths:

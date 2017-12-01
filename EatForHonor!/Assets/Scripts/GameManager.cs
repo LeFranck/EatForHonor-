@@ -117,12 +117,12 @@ public class GameManager : MonoBehaviour
 			return honor > deshonor;
 		} else if (stage == 2) {
 			//transform.Find("btnsWinner").GetComponent<ClickActs>().Linkto = "InterStage2";
-			return 2 * deshonor < honor;	
+			return honor > deshonor;
 		} else if (stage == 3) {
 			//transform.Find("btnsWinner").GetComponent<ClickActs>().Linkto = "InterStage3";
-			return deshonor == 0;
+			return honor > deshonor;
 		} else if (stage == 4) {
-			return false;
+			return honor > deshonor;
 		} else if (stage == 5) {
 			return false;
 		} else if (stage == 6) {

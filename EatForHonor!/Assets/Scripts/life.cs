@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class life : MonoBehaviour {
 
-    public int health = 4;    
+	public double health = 4.0;    
 	// Use this for initialization
 	void Start () {
 		

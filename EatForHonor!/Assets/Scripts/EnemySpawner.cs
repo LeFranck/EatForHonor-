@@ -65,8 +65,8 @@ public class EnemySpawner : MonoBehaviour {
 
 		for (int i = 0; i < wave.count; i++) 
 		{
-			SpawnEnemy (wave.enemy);
-			yield return new WaitForSeconds(5f/wave.rate);
+			SpawnEnemy (wave.enemy, wave.speed);
+			yield return new WaitForSeconds(wave.rate);
 		}
 
 		state = SpawnState.WAITING;
@@ -87,12 +87,13 @@ public class EnemySpawner : MonoBehaviour {
 		return true;
 	}
 
-	void SpawnEnemy(Transform enemy)
+	void SpawnEnemy(Transform enemy, int waveSpeed)
 	{
 		Debug.Log("Spawing enemy " + enemy.name);
 		Vector3 a = transform.position;
 		int rdn = Random.Range (0,Paths.Length -1);
 		enemy.GetComponent<FollowPath>().path = Paths[rdn].GetComponent<PathRail>();
+		enemy.GetComponent<FollowPath>().speed = waveSpeed;
 
 		Instantiate (enemy, a, transform.rotation);
 	}
