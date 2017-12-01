@@ -46,7 +46,7 @@ public class ButtonsBehavior : MonoBehaviour {
 				GameManager.instance.PersonasPermitidas [i] = GameManager.instance.PersonasPermitidasEtapa4 [i];
 			}
 		} else if (GameManager.instance.numStage == 5) {
-			SoundManager.instance.music.clip = SoundManager.instance.stage5Music;
+			
 			for (int i = 0; i < GameManager.instance.PersonasPermitidas.Length; i++) {
 				GameManager.instance.PersonasPermitidas [i] = GameManager.instance.PersonasPermitidasEtapa5 [i];
 			}
@@ -65,8 +65,12 @@ public class ButtonsBehavior : MonoBehaviour {
         GameManager.instance.Info.transform.Find("txt2").GetComponent<TextMesh>().text = GameManager.instance.PersonasPermitidas[1] + "";
         GameManager.instance.Info.transform.Find("txt3").GetComponent<TextMesh>().text = GameManager.instance.PersonasPermitidas[2] + "";
 		GameManager.instance.Info.transform.Find("txt4").GetComponent<TextMesh>().text = GameManager.instance.PersonasPermitidas[3] + "";
-        SceneManager.LoadScene("Stage" + GameManager.instance.numStage.ToString());
-        //SceneManager.LoadScene("Stage3");
+		if (GameManager.instance.numStage == 5) {
+			SceneManager.LoadScene ("Final");
+		} else {
+			SceneManager.LoadScene ("Stage" + GameManager.instance.numStage.ToString ());
+		}
+		//SceneManager.LoadScene("Stage3");
         GameManager.instance.stage = "Stage" + GameManager.instance.numStage.ToString();
         GameManager.instance.Info.gameObject.SetActive(true);
     }
@@ -95,4 +99,10 @@ public class ButtonsBehavior : MonoBehaviour {
         GameManager.instance.stage = "configuracion";
     }
 
+	public void intru()
+	{
+		Debug.Log("conf");
+		SceneManager.LoadScene("Instrucciones");
+		GameManager.instance.stage = "Instrucciones";
+	}
 }
