@@ -22,8 +22,46 @@ public class ButtonsBehavior : MonoBehaviour {
     {
         Debug.Log(to);
         GameManager.instance.HasWaves = true;
-        //SceneManager.LoadScene("Stage2");
+        GameManager.instance.Info.transform.Find("txtHonor").GetComponent<TextMesh>().text = "0";
+        GameManager.instance.Info.transform.Find("txtDeshonor").GetComponent<TextMesh>().text = "0";
+        if (GameManager.instance.numStage == 1)
+        {
+            for (int i = 0; i < GameManager.instance.PersonasPermitidas.Length; i++)
+            {
+                GameManager.instance.PersonasPermitidas[i] = GameManager.instance.PersonasPermitidasEtapa2[i];
+            }
+        }
+
+        if (GameManager.instance.numStage == 2)
+        {
+            for (int i = 0; i < GameManager.instance.PersonasPermitidas.Length; i++)
+            {
+                GameManager.instance.PersonasPermitidas[i] = GameManager.instance.PersonasPermitidasEtapa2[i];
+            }            
+        }
+
+        if (GameManager.instance.numStage == 3)
+        {
+            for (int i = 0; i < GameManager.instance.PersonasPermitidas.Length; i++)
+            {
+                GameManager.instance.PersonasPermitidas[i] = GameManager.instance.PersonasPermitidasEtapa2[i];
+            }
+        }
+
+        if (GameManager.instance.numStage == 4)
+        {
+            for (int i = 0; i < GameManager.instance.PersonasPermitidas.Length; i++)
+            {
+                GameManager.instance.PersonasPermitidas[i] = GameManager.instance.PersonasPermitidasEtapa2[i];
+            }
+        }
+
+        GameManager.instance.Info.transform.Find("txt1").GetComponent<TextMesh>().text = GameManager.instance.PersonasPermitidas[0] + "";
+        GameManager.instance.Info.transform.Find("txt2").GetComponent<TextMesh>().text = GameManager.instance.PersonasPermitidas[1] + "";
+        GameManager.instance.Info.transform.Find("txt3").GetComponent<TextMesh>().text = GameManager.instance.PersonasPermitidas[2] + "";
+        GameManager.instance.Info.transform.Find("txt4").GetComponent<TextMesh>().text = GameManager.instance.PersonasPermitidas[3] + "";
         SceneManager.LoadScene("Stage" + GameManager.instance.numStage.ToString());
+        //SceneManager.LoadScene("Stage3");
         GameManager.instance.stage = "Stage" + GameManager.instance.numStage.ToString();
         GameManager.instance.Info.gameObject.SetActive(true);
     }
@@ -31,6 +69,7 @@ public class ButtonsBehavior : MonoBehaviour {
     public void main()
     {
         Debug.Log("main");
+        GameManager.instance.Info.gameObject.SetActive(false);
         SceneManager.LoadScene("MainMenu");
         GameManager.instance.stage = "MainMenu";
     }
